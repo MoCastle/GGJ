@@ -9,6 +9,8 @@ public enum FloorType
 public class Floor : MonoBehaviour
 {
     public FloorType Type;
+
+    
     // Start is called before the first frame update
     void Start()
     {

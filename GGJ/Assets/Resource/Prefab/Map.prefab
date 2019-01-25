@@ -123,8 +123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112c2621941cc154db7f6d93bbfad8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoxWidth: 256
+  BoxWidth: 2.56
   LineNum: 10
   Column: 10
   Floors: {fileID: 2084513101}
   Floor: {fileID: 4106799000026897935, guid: 5f5cb86cbcd076d42a67317b9968083c, type: 3}
+  FloorArray: []
+  PlayerModel:
+  - {fileID: 0}
+  - {fileID: 0}

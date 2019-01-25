@@ -14,11 +14,23 @@ public class GameMap : MonoBehaviour
     public Transform Floors;
     public Transform Floor;
 
+    public Floor[] FloorArray;
+    [Title("玩家", "black")]
+    public Transform[] PlayerModels;
+
     // Start is called before the first frame update
     void Start()
     {
+        
     }
-
+    private void Awake()
+    {
+        FloorArray = new Floor[Floors.transform.childCount];
+        for (int Idx = 0; Idx < FloorArray.Length; Idx++)
+        {
+            FloorArray[Idx] = Floors.transform.GetChild(Idx).GetComponent<Floor>();
+        }
+    }
     // Update is called once per frame
     void Update()
     {

@@ -5,3 +5,7 @@ Temp/
 Program/MobileGame/Assets/outLog.txt
 Program/MobileGame/.vs
 
+GGJ/.vs/GGJ/v15/Server/sqlite3/db.lock
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-shm
+GGJ/.vs/GGJ/v15/Server/sqlite3/storage.ide-wal

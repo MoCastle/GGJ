@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Events;
+using UnityEngine.EventSystems;
 
 public class EventListener : UnityEngine.EventSystems.EventTrigger
 {
@@ -12,12 +14,12 @@ public class EventListener : UnityEngine.EventSystems.EventTrigger
 	public VoidDelegate onUp;
 	public VoidDelegate onSelect;
 	public VoidDelegate onUpdateSelect;
- 
-	static public EventTriggerListener Get (GameObject go)
+
+    static public EventListener Get(GameObject go)
 	{
       //  Debug.Log("Go is "+go.name);
-		EventTriggerListener listener = go.GetComponent<EventTriggerListener>();
-		if (listener == null) listener = go.AddComponent<EventTriggerListener>();
+        EventListener listener = go.GetComponent<EventListener>();
+        if (listener == null) listener = go.AddComponent<EventListener>();
 		return listener;
 	}
 	public override void OnPointerClick(PointerEventData eventData)
@@ -42,6 +44,4 @@ public class EventListener : UnityEngine.EventSystems.EventTrigger
 	public override void OnUpdateSelected (BaseEventData eventData){
 		if(onUpdateSelect != null) onUpdateSelect(gameObject);
 	}
-}
-
 }

@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
    
     public GameObject Animation_001;     //动画预设体
-    public GameObject Button_001;    //按钮预设体
     public Image BackGround_001;   //背景图1
     public Text Texts_001;             //文本1
     public GameObject TextBox;       //对话框组件
+
+    public GameObject Button_001;
+    public GameObject Button_002;
+    public GameObject Button_003;
+    public GameObject Button_004;
 
     private string All_Tex="一二三四五,!六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十十一十二";
 
@@ -27,12 +32,16 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        TextBox.transform.DOScaleX(0, 0f);//对话框初始化
+        //按钮事件注册
+        EventListener.Get(Button_001.GetComponent<Button>().gameObject).onClick = MyOnClick;
+        EventListener.Get(Button_002.GetComponent<Button>().gameObject).onClick = MyOnClick;
+     //   TextBox.transform.DOScaleX(0, 0f);//对话框初始化
     //    Which_Text(1);
     }
     void Update() 
     {
-        if (Input.GetMouseButtonDown(0))
+
+      /*  if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("下一句");
             Which_Text(2);
@@ -41,7 +50,28 @@ public class UIManager : MonoBehaviour
         {
             TextBox.transform.DOScaleX(1, 0f);
             Which_Text(2);
+        }*/
+    }
+
+    private void MyOnClick(GameObject button)
+    {
+        if (button = Button_001.GetComponent<Button>().gameObject)
+        {
+           // SceneManager.LoadScene("scene2");
         }
+        if (button = Button_002.GetComponent<Button>().gameObject)
+        {
+            // SceneManager.LoadScene("scene2");
+        }
+      /*  if (button = Button_002.GetComponent<Button>().gameObject)
+        {
+        }
+       if (button = Button_003.GetComponent<Button>().gameObject)
+        {
+        }
+        if (button = Button_004.GetComponent<Button>().gameObject)
+        {
+        }*/
     }
     /// <summary>
     /// 控制显示哪段文本

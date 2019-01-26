@@ -17,6 +17,9 @@ public class GameCtrler
         }
     }
     public GameMap GameMap { get; set; }
+
+    public UIManager mgr { get; set; }
+
     public void ResetPlayer()
     {
         foreach( PlayerGameObj obj in GameMap.PlayerList )
@@ -24,8 +27,9 @@ public class GameCtrler
             obj.Reset();
         }
     }
-    public void NextScene()
+    public void NextScene(string name)
     {
+        mgr.ShowBox(name);
         Debug.Log("NextScene");
     }
 }

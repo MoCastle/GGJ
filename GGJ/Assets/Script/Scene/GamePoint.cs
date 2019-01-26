@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class GamePoint : Floor
 {
     public string SceneName;
+
+
+    public static string name;
     public override void Touched()
     {
         PlayerGameObj[] PlayerList = _Map.PlayerList;
@@ -21,8 +24,8 @@ public class GamePoint : Floor
             //////////////////////////此关胜利
             if (SceneName != "")
             {
-                UIManager.WhichScene(SceneName);
-          //      GP_UI.WhichScene(SceneName);
+                name = SceneName;
+                GameCtrler.Ctrler.NextScene(SceneName);          //      GP_UI.WhichScene(SceneName);
               // SceneManager.LoadScene(SceneName);
             }
         }else if(PlayerList[0].CurFloorIdx  == _CurFloorIdx || PlayerList[1].CurFloorIdx == _CurFloorIdx)

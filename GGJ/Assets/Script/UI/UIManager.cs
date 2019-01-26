@@ -7,6 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    static UIManager _uim;
+    public static UIManager uim
+    {
+
+        get
+        {
+            if (_uim == null)
+                _uim = new UIManager();
+
+            return _uim;
+        }
+    }
+     
     static int thisScene=0;
    
     public GameObject Animation_001;     //动画预设体
@@ -107,23 +120,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 哪一关胜利
-    /// </summary>
-    public static void WhichScene(string name)
-    {
-        UIManager u = new UIManager();
-        u._thisName = name;
-        u.ShowBox(name);
-        Debug.Log("name is "+name);
-    }
+  
     /// <summary>
     /// 显示对话框
     /// </summary>
     public void ShowBox(string name)
     {
         Debug.Log(" show name is " + name);
-        TextBox.SetActive(true);
+      //  TextBox.SetActive(true);
     }
 
     /// <summary>

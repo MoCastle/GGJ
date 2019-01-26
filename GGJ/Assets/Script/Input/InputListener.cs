@@ -28,7 +28,7 @@ public class InputListener : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        input_GM = new GameMap();
+        input_GM = GameObject.Find("Map").GetComponent<GameMap>();
         key = KeyCode.Space;
     }
 

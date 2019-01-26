@@ -22,6 +22,9 @@ public class GameMap:BaseGame
     // Start is called before the first frame update
     public override void StartSet()
     {
+
+       // FloorArray = GameObject.Find("Floors").GetComponentInChildren<Floor>();
+
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
 
@@ -39,9 +42,11 @@ public class GameMap:BaseGame
             Y = Y > 0 ? Mathf.Floor(Y / MapComp.BoxWidth) : 0;
             Debug.Log("X is " + X);
             Debug.Log("y is " + Y);
+
             Vector3 newPS = PlayerModel[Index].transform.position;
-            newPS.x = MapComp.BoxWidth / 2 + X * MapComp.BoxWidth + Floors.position.x;
-            newPS.y = MapComp.BoxWidth / 2 + Y * MapComp.BoxWidth + Floors.position.y;
+            newPS.x = MapComp.BoxWidth / 2 + X * MapComp.BoxWidth;// +Floors.position.x;
+            newPS.y = MapComp.BoxWidth / 2 + Y * MapComp.BoxWidth;// +Floors.position.y;
+
             Debug.Log(" newPS.x  is " + newPS.x);
             Debug.Log("  newPS.y  is " + newPS.y);
             PlayerModel[Index].transform.position = newPS;
@@ -66,31 +71,34 @@ public class GameMap:BaseGame
     /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
     public void Move(int player_id,int forward)
     {
+        GameObject Map = GameObject.Find("Map");
+        GameMap MapComp = Map.GetComponent<GameMap>();
+
         InputListener.isMove = false;
-
         
-        Vector3 oldPS = PlayerModels[player_id - 1].transform.position;
-
-
+        Vector3 oldPS = PlayerModels[player_id-1].transform.position;
 
         Debug.Log("oldPS is "+oldPS);
-        float X;          //应移动的位置的X
-        float Y;          //应移动的位置的Y
-        Vector3 newPS=Vector3.zero;          //应移动的位置
+        Vector3 newPS=oldPS;          //应移动的位置
         switch (forward)
         {
             case 1:
+            newPS.y =oldPS.y+ MapComp.BoxWidth ;//+ Y * MapComp.BoxWidth;
                 break;
             case 2:
+                newPS.x = oldPS.x - MapComp.BoxWidth  ;//- X * MapComp.BoxWidth;
                 break;
             case 3:
+                newPS.y = oldPS.y - MapComp.BoxWidth  ;//- Y * MapComp.BoxWidth;
                 break;
             case 4:
+                newPS.x = oldPS.x + MapComp.BoxWidth  ;//+ X * MapComp.BoxWidth;
                 break;
             default:
                 break;
         };
         PlayerModels[player_id-1].transform.position = newPS;
+        Debug.Log(" PlayerModels["+player_id+"].transform.position   is " + PlayerModels[player_id - 1].transform.position);
 
     }
     private void Awake()

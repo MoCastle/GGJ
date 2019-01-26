@@ -18,6 +18,6 @@ public class BaseGame : MonoBehaviour
     }
     public virtual void UpdateByTime(float GameTime,float RealTime)
     {
-        Debug.Log(this.GetType().FullName+" GameTime:" + GameTime + " RealTime:"+RealTime);
+    //    Debug.Log(this.GetType().FullName+" GameTime:" + GameTime + " RealTime:"+RealTime);
     }
 }

@@ -7,21 +7,7 @@ public enum FloorType
     Jamed,
     player
 }
-public class Floor : MonoBehaviour
+public class Floor : MapObj
 {
     public FloorType Type;
-
-
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

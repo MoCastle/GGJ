@@ -23,7 +23,7 @@ public class InputListener : MonoBehaviour
     public GameMap input_GM;
 
     public static bool isMove = false;
-    private int Forward=0;
+    private MoveDir Forward=0;
     private int WhichPlayer = 0;
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 1;
-            Forward = 1;
+            Forward = MoveDir.Up;
 
             Debug.Log("key is W");
         }
@@ -51,7 +51,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 1;
-            Forward = 2;
+            Forward = MoveDir.Left;
 
             isMove = true;
             Debug.Log("key is A" );
@@ -62,7 +62,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 1;
-            Forward = 3;
+            Forward = MoveDir.Down;
 
             Debug.Log("key is S");
         }
@@ -72,7 +72,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 1;
-            Forward = 4;
+            Forward = MoveDir.Right;
 
             Debug.Log("key is D");
         }
@@ -82,7 +82,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 2;
-            Forward = 1;
+            Forward = MoveDir.Up;
 
             Debug.Log("key is UP");
         }
@@ -92,7 +92,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer =2;
-            Forward = 2;
+            Forward = MoveDir.Left;
 
             Debug.Log("key is LEFT" );
         }
@@ -102,7 +102,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 2;
-            Forward = 3;
+            Forward = MoveDir.Down;
 
             Debug.Log("key is DOWN" );
         }
@@ -112,7 +112,7 @@ public class InputListener : MonoBehaviour
 
             isMove = true;
             WhichPlayer = 2;
-            Forward = 4;
+            Forward = MoveDir.Right;
 
             Debug.Log("key is RIGHT" );
         }

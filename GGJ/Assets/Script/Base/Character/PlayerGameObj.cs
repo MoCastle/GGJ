@@ -2,61 +2,82 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerGameObj : MonoBehaviour
+public class PlayerGameObj : MapObj
 {
-    int _FloorIdx;
-    public int CurFloorIdx
+    [Title("禁止垂直运动", "black")]
+    public bool VForbid;
+    [Title("禁止水平运动", "black")]
+    public bool HForbid;
+    int[] _Location;
+    public bool Move(MoveDir forward,bool Pushed = false)
     {
-        get
+        GameMap map = _Map;
+        InputListener.isMove = false;
+
+        Location location = Location;
+
+        Vector3 oldPS = transform.position;
+
+        Debug.Log("oldPS is " + oldPS);
+        switch (forward)
         {
-            return _FloorIdx;
-        }
-        set
+            //上
+            case MoveDir.Up:
+                if (VForbid&& !Pushed)
+                    return false;
+                location.y += 1;
+                break;
+            //左
+            case MoveDir.Left:
+                if (HForbid && !Pushed)
+                    return false;
+                location.x -= 1;
+                break;
+            //下
+            case MoveDir.Down:
+                if (VForbid && !Pushed)
+                    return false;
+                location.y -= 1;
+                break;
+            //右
+            case MoveDir.Right:
+                if (HForbid && !Pushed)
+                    return false;
+                location.x += 1;
+                break;
+            default:
+                break;
+        };
+        Floor floor = _Map.GetFloorByLocation(location);
+        if (floor == null)
         {
-            _FloorIdx = value;
+            return false;
         }
-    }
-
-    /// <summary>
-    /// 角色移动
-    /// </summary>
-    /// <param name="player_id">哪个玩家</param>
-    /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
-    public void Move( int forward)
-    {
-
-           GameMap map = GameMgr.Mgr.Map;
-           InputListener.isMove = false;
-
-         //    Location location = GameMgr.Mgr.Map.GetLocationByIdx(CurFloorIdx);
-
-              Vector3 oldPS = transform.position;
-
-              Debug.Log("oldPS is " + oldPS);
-        /*    switch (forward)
+        else if (floor.Type == FloorType.Jamed)
+        {
+            return false;
+        }
+        //检查下一步有没有角色
+        foreach (PlayerGameObj playerObj in _Map.PlayerList)
+        {
+            if (playerObj!=this&&playerObj.CurFloorIdx == _Map.GetIdxByLocation(location))
             {
-                //上
-                case 1:
-                    location.y += 1;
-                    break;
-                //左
-                case 2:
-                    location.x -= 1;
-                    break;
-                //下
-                case 3:
-                    location.y -= 1;
-                    break;
-                //右
-                case 4:
-                    location.x += 1;
-                    break;
-                default:
-                    break;
-            };
-         //   int newIdx = map.GetIdxByLocation(location);
-            CurFloorIdx = newIdx;
-        
-          transform.position = map.GetPosition(newIdx); */
+                if( playerObj.Move(forward,true))
+                {
+                    _MoveEnd(location);
+                    return true;
+                }else
+                {
+                    return false;
+                }
+            }
+        }
+        _MoveEnd(location);
+        return true;
+    }
+    void _MoveEnd(Location location)
+    {
+        CurFloorIdx = _Map.GetIdxByLocation(location);
+        transform.position = _Map.GetPosition(CurFloorIdx);
     }
 }

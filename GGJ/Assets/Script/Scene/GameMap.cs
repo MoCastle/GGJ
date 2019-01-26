@@ -28,7 +28,6 @@ public class GameMap:BaseGame
     }
     [Title("玩家", "black")]
     public PlayerGameObj[] PlayerList;
-    public int[] PlayerLocation;
 
     public Location GetLocationByPS(Vector3 position)
     {
@@ -83,13 +82,12 @@ public class GameMap:BaseGame
     // Start is called before the first frame update
     public override void StartSet()
     {
-
+        GameMgr.Mgr.Map = this;
        // FloorArray = GameObject.Find("Floors").GetComponentInChildren<Floor>();
 
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
 
-        PlayerLocation = new int[2];
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
         Transform Floors = MapComp.Floors;
@@ -100,7 +98,7 @@ public class GameMap:BaseGame
             Vector3 newPS = GetPosition(location);
             newPS.z = PlayerModel[Index].transform.position.z;
             PlayerModel[Index].transform.position = newPS;
-            PlayerLocation[Index] = GetIdxByLocation(location);
+            PlayerModel[Index].CurFloorIdx = GetIdxByLocation(location);
         }
       
     }
@@ -119,44 +117,8 @@ public class GameMap:BaseGame
     /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
     public void Move(int player_id,int forward)
     {
-
-        InputListener.isMove = false;
-
-        Location location = GetLocationByIdx(PlayerLocation[player_id-1]);
-
-        Vector3 oldPS = PlayerList[player_id-1].transform.position;
-
-        Debug.Log("oldPS is "+oldPS);
-        switch (forward)
-        {
-            //上
-            case 1:
-                location.y += 1;
-                break;
-            //左
-            case 2:
-                location.x -= 1;
-                break;
-            //下
-            case 3:
-                location.y -= 1;
-                break;
-            //右
-            case 4:
-                location.x += 1;
-                break;
-            default:
-                break;
-        };
-        int newIdx = GetIdxByLocation(location);
-        PlayerLocation[player_id - 1] = GetIdxByLocation(location);
-        Floor TargetFloor = GetFoorByIdx(newIdx) ;
-        if(!TargetFloor)
-        {
-            return;
-        }
-        PlayerList[player_id-1].transform.position = FloorArray[newIdx].transform.position;
-        Debug.Log(" PlayerModels["+player_id+"].transform.position   is " + PlayerList[player_id - 1].transform.position);
+        PlayerGameObj player = PlayerList[player_id-1];
+        player.Move(forward);
     }
 
     private void Awake()

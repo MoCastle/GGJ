@@ -148,10 +148,12 @@ public class GameMap:BaseGame
             Debug.Log(FloorArray[Idx].transform.localPosition);
         }
 
-        PlayerLocation = new int[2];
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
         Transform Floors = MapComp.Floors;
+        PlayerList = new PlayerGameObj[2];
+        PlayerList[0] = GameObject.Find("PlayerOne").GetComponent<PlayerGameObj>();
+        PlayerList[1] = GameObject.Find("PlayerTwo").GetComponent<PlayerGameObj>();
         PlayerGameObj[] PlayerModel = PlayerList;
         for (int Index = 0; Index < PlayerModel.Length; ++Index)
         {

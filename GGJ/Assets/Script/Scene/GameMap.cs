@@ -32,16 +32,66 @@ public class GameMap:BaseGame
         Transform[] PlayerModel = MapComp.PlayerModels;
         for (int Index = 0; Index < PlayerModel.Length; ++Index)
         {
+         
             float X = (PlayerModel[Index].transform.position.x - MapComp.BoxWidth / 2 - Floors.position.x);
             float Y = (PlayerModel[Index].transform.position.y - MapComp.BoxWidth / 2 - Floors.position.y);
             X = X > 0 ? Mathf.Floor(X / MapComp.BoxWidth) : 0;
             Y = Y > 0 ? Mathf.Floor(Y / MapComp.BoxWidth) : 0;
+            Debug.Log("X is " + X);
+            Debug.Log("y is " + Y);
             Vector3 newPS = PlayerModel[Index].transform.position;
             newPS.x = MapComp.BoxWidth / 2 + X * MapComp.BoxWidth + Floors.position.x;
             newPS.y = MapComp.BoxWidth / 2 + Y * MapComp.BoxWidth + Floors.position.y;
+            Debug.Log(" newPS.x  is " + newPS.x);
+            Debug.Log("  newPS.y  is " + newPS.y);
             PlayerModel[Index].transform.position = newPS;
             PlayerLocation[Index] = (int)Y * Column + (int)X;
+
+            Debug.Log("Index is "+Index);
+            /*foreach (object i in PlayerLocation)
+            {
+                int j = 0;
+                Debug.Log(j+" is "+i);
+                j++;
+            }*/
         }
+      
+    }
+
+
+    /// <summary>
+    /// 角色移动
+    /// </summary>
+    /// <param name="player_id">哪个玩家</param>
+    /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
+    public void Move(int player_id,int forward)
+    {
+        InputListener.isMove = false;
+
+        
+        Vector3 oldPS = PlayerModels[player_id - 1].transform.position;
+
+
+
+        Debug.Log("oldPS is "+oldPS);
+        float X;          //应移动的位置的X
+        float Y;          //应移动的位置的Y
+        Vector3 newPS=Vector3.zero;          //应移动的位置
+        switch (forward)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        };
+        PlayerModels[player_id-1].transform.position = newPS;
+
     }
     private void Awake()
     {

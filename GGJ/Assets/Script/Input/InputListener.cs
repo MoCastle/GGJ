@@ -16,15 +16,111 @@ public enum DirEnum
 
 public class InputListener : MonoBehaviour
 {
+    public bool IsMove; //是否进行了移动
+    public  DirEnum Player_1;
+    public DirEnum Player_2;
+    private KeyCode key;
+    public GameMap input_GM;
+
+    public static bool isMove = false;
+    private int Forward=0;
+    private int WhichPlayer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        input_GM = new GameMap();
+        key = KeyCode.Space;
     }
 
-    // Update is called once per frame
+    //获取角色移动方向
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Player_1 = DirEnum.P1Up;
+
+            isMove = true;
+            WhichPlayer = 1;
+            Forward = 1;
+
+            Debug.Log("key is W");
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Player_1 = DirEnum.P1Left;
+
+            isMove = true;
+            WhichPlayer = 1;
+            Forward = 2;
+
+            isMove = true;
+            Debug.Log("key is A" );
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Player_1 = DirEnum.P1Down;
+
+            isMove = true;
+            WhichPlayer = 1;
+            Forward = 3;
+
+            Debug.Log("key is S");
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Player_1 = DirEnum.P1Right;
+
+            isMove = true;
+            WhichPlayer = 1;
+            Forward = 4;
+
+            Debug.Log("key is D");
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Player_2 = DirEnum.P2Up;
+
+            isMove = true;
+            WhichPlayer = 2;
+            Forward = 1;
+
+            Debug.Log("key is UP");
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Player_2 = DirEnum.P2Left;
+
+            isMove = true;
+            WhichPlayer =2;
+            Forward = 2;
+
+            Debug.Log("key is LEFT" );
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Player_2 = DirEnum.P2Down;
+
+            isMove = true;
+            WhichPlayer = 2;
+            Forward = 3;
+
+            Debug.Log("key is DOWN" );
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Player_2 = DirEnum.P2Right;
+
+            isMove = true;
+            WhichPlayer = 2;
+            Forward = 4;
+
+            Debug.Log("key is RIGHT" );
+        }
+        if (isMove)
+        {
+            input_GM.Move(WhichPlayer,Forward);
+        }
+
+       
     }
 }

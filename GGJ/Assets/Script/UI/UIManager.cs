@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void Which_Text(int id)
     {
+
         if (Flag_Text)//若文本未显示完
         {
             Texts_001.GetComponent<Text>().text = null;//清空对话框中文字

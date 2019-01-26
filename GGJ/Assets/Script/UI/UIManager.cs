@@ -61,6 +61,7 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
+        GameCtrler.Ctrler.mgr = this;
         //按钮事件注册
         if (Button_001!= null)
         EventListener.Get(Button_001.GetComponent<Button>().gameObject).onClick = MyOnClick;
@@ -127,7 +128,8 @@ public class UIManager : MonoBehaviour
     public void ShowBox(string name)
     {
         Debug.Log(" show name is " + name);
-      //  TextBox.SetActive(true);
+        TextBox.SetActive(true);
+        Which_Text(1);
     }
 
     /// <summary>
@@ -135,7 +137,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void Which_Text(int id)
     {
-        
+        Texts_001.GetComponent<Text>().text = null;
         if (Flag_Text&&Texts_001!=null)//若文本未显示完
         {
             Debug.Log("id");
@@ -157,8 +159,14 @@ public class UIManager : MonoBehaviour
         }
         else if (Texts_001 != null)
         {
-            TextBox.transform.DOScaleX(0,0.3f);//文本已显示完，关闭对话框
+            Tweener t1 = TextBox.transform.DOScaleX(0, 0.3f);
+            t1.OnComplete(delegate() { SceneManager.LoadScene("scene2"); });
+            
         }
+    }
+    public void ShowCG()
+    {
+
     }
   /*  IEnumerator show(int length)
     {

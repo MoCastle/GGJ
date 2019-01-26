@@ -17,7 +17,7 @@ public class PassGamePoint : Item
             return _IsPlayerTouched;
         }
     }
-    public void Touched()
+    public override void Touched(int location,GameMap map = null)
     {
         _IsPlayerTouched = true;
         if( !Brother.ISPlayerTouched )

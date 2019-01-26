@@ -18,6 +18,9 @@ public class BaseGame : MonoBehaviour
     }
     public virtual void UpdateByTime(float GameTime,float RealTime)
     {
-        Debug.Log(this.GetType().FullName+" GameTime:" + GameTime + " RealTime:"+RealTime);
+    }
+    private void OnDestroy()
+    {
+        _Frame.UnRegist(this);
     }
 }

@@ -283,3 +283,15 @@ D:\GitProgram\GGJ\GGJ\obj\Debug\Assembly-CSharp.pdb
 D:\github\GGJ\GGJ\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\github\GGJ\GGJ\obj\Debug\Assembly-CSharp.dll
 D:\github\GGJ\GGJ\obj\Debug\Assembly-CSharp.pdb
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DemiLib.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween43.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween46.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween50.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTweenPro.dll
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DemiLib.xml
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween.xml
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween43.xml
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween46.xml
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTween50.xml
+D:\GitProgram\GGJ\GGJ\Temp\bin\Debug\DOTweenPro.xml

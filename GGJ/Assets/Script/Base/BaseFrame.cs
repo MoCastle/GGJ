@@ -22,6 +22,7 @@ public class BaseFrame
         GameObject baseGameObj = new GameObject("GameFrame");
         BaseFrameObj frameObj = baseGameObj.AddComponent<BaseFrameObj>();
         frameObj.BaseFrame = this;
+        GameObject.DontDestroyOnLoad(frameObj);
         _AllFrameGame = new Dictionary<string, List<BaseGame>>();
     }
     Dictionary<string,List<BaseGame>> _AllFrameGame;
@@ -54,5 +55,10 @@ public class BaseFrame
     {
         List<BaseGame> list = GetGameListByName(Name);
         list.Add(gameObj);
+    }
+    public void UnRegist(BaseGame gameObj)
+    {
+        List<BaseGame> list = GetGameListByName(gameObj.GetType().FullName);
+        list.Remove(gameObj);
     }
 }

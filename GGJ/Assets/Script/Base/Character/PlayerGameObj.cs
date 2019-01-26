@@ -4,28 +4,59 @@ using UnityEngine;
 
 public class PlayerGameObj : MonoBehaviour
 {
-    int[] _Location;
-    public int CurLocation
+    int _FloorIdx;
+    public int CurFloorIdx
     {
         get
         {
-            return _Location[0];
+            return _FloorIdx;
         }
-    }
-    public int NextLocation
-    {
-        get
+        set
         {
-            return _Location[1];
+            _FloorIdx = value;
         }
     }
 
-    public void SetCurLocation(int location)
+    /// <summary>
+    /// 角色移动
+    /// </summary>
+    /// <param name="player_id">哪个玩家</param>
+    /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
+    public void Move( int forward)
     {
-        _Location[0] = location;
-    }
-    public void SetNextLocation(int location)
-    {
-        _Location[1] = location;
+
+        GameMap map = GameMgr.Mgr.Map;
+        InputListener.isMove = false;
+
+        Location location = GameMgr.Mgr.Map.GetLocationByIdx(CurFloorIdx);
+
+        Vector3 oldPS = transform.position;
+
+        Debug.Log("oldPS is " + oldPS);
+        switch (forward)
+        {
+            //上
+            case 1:
+                location.y += 1;
+                break;
+            //左
+            case 2:
+                location.x -= 1;
+                break;
+            //下
+            case 3:
+                location.y -= 1;
+                break;
+            //右
+            case 4:
+                location.x += 1;
+                break;
+            default:
+                break;
+        };
+        int newIdx = map.GetIdxByLocation(location);
+        CurFloorIdx = newIdx;
+        
+        transform.position = map.GetPosition(newIdx);
     }
 }

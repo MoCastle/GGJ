@@ -7,6 +7,8 @@ public class ToolMenue : MonoBehaviour {
     [MenuItem("重置地图/重置地图")]
     public static void AddetScene()
     {
+        Vector3 testVector = new Vector3();
+        testVector.x = 1.28f;
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
         Transform Floors = MapComp.Floors;
@@ -22,14 +24,18 @@ public class ToolMenue : MonoBehaviour {
             Transform newBox = GameObject.Instantiate<Transform>(MapComp.Floor);
             newBox.SetParent(Floors);
             Vector3 newPS = newBox.transform.position;
-            newPS.x = MapComp.BoxWidth / 2 + (Idx % MapComp.LineNum) * MapComp.BoxWidth;
-            newPS.y = MapComp.BoxWidth / 2 + ((Idx / MapComp.LineNum) % MapComp.Column) * MapComp.BoxWidth;
+            float x = MapComp.BoxWidth / 2 + (Idx % MapComp.LineNum) * MapComp.BoxWidth;
+            newPS.x = x;
+            float y = MapComp.BoxWidth / 2 + ((Idx / MapComp.LineNum) % MapComp.Column) * MapComp.BoxWidth;
+            newPS.y = y;
             newBox.transform.position = newPS;
         }
     }
     [MenuItem("重置地图/格式化玩家位置")]
     public static void SetPlayers()
     {
+        Vector3 testVector = new Vector3();
+        testVector.x = 1.28f;
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
         Transform Floors = MapComp.Floors;

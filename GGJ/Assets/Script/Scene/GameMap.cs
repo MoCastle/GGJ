@@ -37,8 +37,6 @@ public class GameMap:BaseGame
         FloorArray = GameObject.Find("Floors").GetComponentsInChildren<Floor>();
         CreateJamed();
 
-        Animation();
-
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
 
@@ -87,7 +85,7 @@ public class GameMap:BaseGame
 
         for (int i = 0; i < FloorArray.Length;i++ )
         {
-            if (i < LineNum)
+            if (i<Column)
             {
                 FloorArray[i].Type = FloorType.Jamed;
             }
@@ -149,16 +147,16 @@ public class GameMap:BaseGame
         {
             case 1:
                 //检测是否是障碍物
-                if (PlayerLocation[player_id - 1] + LineNum<FloorArray.Length&&FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.Jamed)
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.Jamed)
                     flag = false;
-                else if (PlayerLocation[player_id - 1] + LineNum < FloorArray.Length)
+                else
                 {
                     FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
                     FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.player;
                     PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
                 }
                 //检测是否是玩家
-                if (PlayerLocation[player_id - 1] + LineNum < FloorArray.Length && FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
                 {
                     if (player_id == 1)
                     {
@@ -192,9 +190,9 @@ public class GameMap:BaseGame
                 break;
             case 3:
                 //检测是否是障碍物
-                if (PlayerLocation[player_id - 1] - LineNum>0&&FloorArray[PlayerLocation[player_id - 1] - LineNum].Type == FloorType.Jamed)
+                if (FloorArray[PlayerLocation[player_id - 1] - LineNum].Type == FloorType.Jamed)
                     flag = false;
-                else if (PlayerLocation[player_id - 1] - LineNum > 0)
+                else
                 {
                     FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
                     FloorArray[PlayerLocation[player_id - 1] - LineNum].Type = FloorType.player;
@@ -249,26 +247,5 @@ public class GameMap:BaseGame
             FloorArray[Idx] = Floors.transform.GetChild(Idx).GetComponent<Floor>();
         }
     }
-
-    //地板动画
-    public void Animation()
-    {
-        StartCoroutine(Animator());
-    }
-    IEnumerator Animator()
-    {
-        yield return new WaitForSeconds(0.1f);
-        FloorArray[0].GetComponent<SpriteRenderer>().sprite = GameObject.Find("Sprites").GetComponent<SpiteManager>().Scene_003[3];
-        StartCoroutine(Animator_2());
-    }
-    IEnumerator Animator_2()
-    {
-        yield return new WaitForSeconds(0.1f);
-        FloorArray[0].GetComponent<SpriteRenderer>().sprite = GameObject.Find("Sprites").GetComponent<SpiteManager>().Scene_003[2];
-        StartCoroutine(Animator());
-    }
-    public void StopAnimator()
-    {
-        StopAllCoroutines();
-    }
+    
 }

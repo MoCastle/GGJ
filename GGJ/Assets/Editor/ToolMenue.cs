@@ -23,10 +23,10 @@ public class ToolMenue : MonoBehaviour {
         {
             Transform newBox = GameObject.Instantiate<Transform>(MapComp.Floor);
             newBox.SetParent(Floors);
-            Vector3 newPS = MapComp.GetPosition(Idx);
+            //Vector3 newPS = MapComp.GetPosition(Idx);
 
-            newPS.z = newBox.transform.position.z;
-            newBox.transform.position = newPS;
+         //   newPS.z = newBox.transform.position.z;
+       //     newBox.transform.position = newPS;
         }
     }
     [MenuItem("重置地图/格式化玩家位置")]
@@ -37,12 +37,12 @@ public class ToolMenue : MonoBehaviour {
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
         Transform Floors = MapComp.Floors;
-        PlayerGameObj[] PlayerModel = MapComp.PlayerList;
-        for (int Index = 0;Index< PlayerModel.Length;++Index)
-        {
-            Vector3 newPS = MapComp.GetPosition(PlayerModel[Index].transform.position);
-            newPS.z = PlayerModel[Index].transform.position.z;
-            PlayerModel[Index].transform.position = newPS;
-        }
+      //  PlayerGameObj[] PlayerModel = MapComp.PlayerList;
+     //   for (int Index = 0;Index< PlayerModel.Length;++Index)
+      //  {
+         //   Vector3 newPS = MapComp.GetPosition(PlayerModel[Index].transform.position);
+        //    newPS.z = PlayerModel[Index].transform.position.z;
+        //    PlayerModel[Index].transform.position = newPS;
+      //  }
     }
 }

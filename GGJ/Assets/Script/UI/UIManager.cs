@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    static int thisScene=0;
    
     public GameObject Animation_001;     //动画预设体
     public Image BackGround_001;   //背景图1
@@ -33,8 +34,14 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         //按钮事件注册
+        if (Button_001!= null)
         EventListener.Get(Button_001.GetComponent<Button>().gameObject).onClick = MyOnClick;
+        if (Button_002!=null)
         EventListener.Get(Button_002.GetComponent<Button>().gameObject).onClick = MyOnClick;
+        if (Button_003 != null)
+            EventListener.Get(Button_003.GetComponent<Button>().gameObject).onClick = MyOnClick;
+        if (Button_004 != null)
+            EventListener.Get(Button_004.GetComponent<Button>().gameObject).onClick = MyOnClick;
      //   TextBox.transform.DOScaleX(0, 0f);//对话框初始化
     //    Which_Text(1);
     }
@@ -55,13 +62,32 @@ public class UIManager : MonoBehaviour
 
     private void MyOnClick(GameObject button)
     {
-        if (button = Button_001.GetComponent<Button>().gameObject)
+        if (Button_001 != null && button ==Button_001.GetComponent<Button>().gameObject)
         {
+            thisScene = 1;
+    
+            SceneManager.LoadScene("Scene1");
+            Debug.Log("start");
            // SceneManager.LoadScene("scene2");
         }
-        if (button = Button_002.GetComponent<Button>().gameObject)
+        if (Button_002!=null&&button == Button_002.GetComponent<Button>().gameObject)
         {
+            Debug.Log("Exit");
             // SceneManager.LoadScene("scene2");
+        }
+        if (Button_003 != null && button == Button_003.GetComponent<Button>().gameObject)
+        {
+           // thisScene += 1;
+         //   Debug.Log("Scene" + thisScene.ToString());
+          //  SceneManager.LoadScene("Scene"+thisScene.ToString());
+            // SceneManager.LoadScene("scene2");
+        }
+        if (Button_004 != null && button == Button_004.GetComponent<Button>().gameObject)
+        {
+            thisScene += 1;
+            Debug.Log("Scene" + thisScene.ToString());
+            SceneManager.LoadScene("Scene" + thisScene.ToString());
+           // Debug.Log("Story");            // 
         }
       /*  if (button = Button_002.GetComponent<Button>().gameObject)
         {

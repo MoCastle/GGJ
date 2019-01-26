@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class GameMgr
 {
+ 
+
+
+
+
     static GameMgr _Mgr;
     public static GameMgr Mgr
     {
@@ -17,6 +22,7 @@ public class GameMgr
             return _Mgr;
         }
     }
+
     public GameMap Map
     {
         get;

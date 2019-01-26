@@ -37,7 +37,7 @@ public class GameMap:BaseGame
         FloorArray = GameObject.Find("Floors").GetComponentsInChildren<Floor>();
         CreateJamed();
 
-        Animation();
+      //  Animation();
 
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
@@ -250,6 +250,7 @@ public class GameMap:BaseGame
         }
     }
 
+    /*
     //地板动画
     public void Animation()
     {
@@ -258,7 +259,7 @@ public class GameMap:BaseGame
     IEnumerator Animator()
     {
         yield return new WaitForSeconds(0.1f);
-        FloorArray[0].GetComponent<SpriteRenderer>().sprite = GameObject.Find("Sprites").GetComponent<SpiteManager>().Scene_003[3];
+       FloorArray[0].GetComponent<SpriteRenderer>().sprite = GameObject.Find("Sprites").GetComponent<SpiteManager>().Scene_003[3];
         StartCoroutine(Animator_2());
     }
     IEnumerator Animator_2()
@@ -270,5 +271,5 @@ public class GameMap:BaseGame
     public void StopAnimator()
     {
         StopAllCoroutines();
-    }
+    }*/
 }

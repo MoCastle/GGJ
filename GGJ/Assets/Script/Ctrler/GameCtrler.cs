@@ -16,9 +16,16 @@ public class GameCtrler
             return _Ctrler;
         }
     }
-    
+    GameMap GameMap { get; set; }
     public void ResetPlayer()
     {
-
+        foreach( PlayerGameObj obj in GameMap.PlayerList )
+        {
+            obj.Reset();
+        }
+    }
+    public void NextScene()
+    {
+        Debug.Log("NextScene");
     }
 }

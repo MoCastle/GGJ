@@ -8,7 +8,10 @@ public class PlayerGameObj : MapObj
     public bool VForbid;
     [Title("禁止水平运动", "black")]
     public bool HForbid;
-    int[] _Location;
+    public void Reset()
+    {
+        Vector3 position = _Map.GetPosition(_StartIdx);
+    }
     public bool Move(MoveDir forward,bool Pushed = false)
     {
         GameMap map = _Map;

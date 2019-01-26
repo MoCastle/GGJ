@@ -9475,7 +9475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1208734160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9493,6 +9493,7 @@ MonoBehaviour:
   BackGround_001: {fileID: 0}
   Texts_001: {fileID: 1360068302}
   TextBox: {fileID: 891452828}
+  NextInfor: {fileID: 0}
   Button_001: {fileID: 0}
   Exit: {fileID: 1350472778}
   ReStart: {fileID: 849514157}
@@ -17644,7 +17645,7 @@ PrefabInstance:
     - target: {fileID: 6213292238840489566, guid: ab415ccae5a87534082ad592721e724b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6213292238840489567, guid: ab415ccae5a87534082ad592721e724b,
         type: 3}

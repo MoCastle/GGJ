@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Image BackGround_001;   //背景图1
     public Text Texts_001;             //文本1
     public GameObject TextBox;       //对话框组件
+    public GameObject NextInfor;
 
     public GameObject Button_001;
     public GameObject Exit;
@@ -24,22 +25,24 @@ public class UIManager : MonoBehaviour
 
     public GameObject Vague;//模糊遮罩
 
+
+
     public GameObject StoryBook;
     public Text All_Story;
     private int number_Story = 40;
     private int thisChar_Story = 0;
 
-    private string All_Tex="一二三四五,!六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十十一十二";
+    private string Text_Scene1="我就算被俘虏了，也不能只有一道小青菜吃吧，怎么长肉啊！居然做了麻辣兔子头，还贱兮兮的凑近我说，怎么不吃肉！？你见过吃肉的兔子吗！！？？！？";
 
     private bool Flag_Text=true;         //是否播放完文本
 
-    private int number_Conver=8;          //每一行所显示的字数
+    private int number_Conver=15;          //每一行所显示的字数
     private int ThisChar_Conver = 0;      //当前显示到第几个字符
 
     public string all_Tex 
     {
-        get { return All_Tex; }
-        set { All_Tex = value; }
+        get { return Text_Scene1; }
+        set { Text_Scene1 = value; }
     }
     void Start()
     {
@@ -52,11 +55,17 @@ public class UIManager : MonoBehaviour
             EventListener.Get(ReStart.GetComponent<Button>().gameObject).onClick = MyOnClick;
         if (Story != null)
             EventListener.Get(Story.GetComponent<Button>().gameObject).onClick = MyOnClick;
-
+        if (Next != null)
         EventListener.Get(Next.gameObject).onClick = MyOnClick;
+        if (Return != null)
         EventListener.Get(Return.gameObject).onClick = MyOnClick;
+        if (NextInfor != null)
+            EventListener.Get(NextInfor.gameObject).onClick = MyOnClick;
 
+        if (StoryBook!=null)
         StoryBook.transform.DOScale(0, 0);
+
+        Which_Text(1);
      //   TextBox.transform.DOScaleX(0, 0f);//对话框初始化
     //    Which_Text(1);
     }
@@ -79,9 +88,12 @@ public class UIManager : MonoBehaviour
     {
         if (Button_001 != null && button ==Button_001.GetComponent<Button>().gameObject)
         {
+          //  Debug.Log("start");
             thisScene = 1;
-            SceneManager.LoadScene("Scene1");
-            Debug.Log("start");
+            ToBlack tb = GameObject.Find("ToBlack").GetComponent<ToBlack>();
+           tb._ToBlack();
+         //   SceneManager.LoadScene("Scene1");
+         //  
            // SceneManager.LoadScene("scene2");
         }
         if (Exit != null && button == Exit.GetComponent<Button>().gameObject)
@@ -92,9 +104,11 @@ public class UIManager : MonoBehaviour
         if (ReStart != null && button == ReStart.GetComponent<Button>().gameObject)
         {
             Debug.Log("ReStart");
-            thisScene += 1;
-            Debug.Log("Scene" + thisScene.ToString());
-          SceneManager.LoadScene("Scene"+thisScene.ToString());
+            GameCtrler.Ctrler.ResetPlayer();
+         //   thisScene += 1;
+          //  Debug.Log("Scene" + thisScene.ToString());
+          //  if (thisScene<=4)
+        //  SceneManager.LoadScene("Scene"+thisScene.ToString());
             // SceneManager.LoadScene("scene2");
         }
         if (Story != null && button == Story.GetComponent<Button>().gameObject)
@@ -114,6 +128,10 @@ public class UIManager : MonoBehaviour
             StoryBook.transform.DOScale(0, 0.4f);
             Debug.Log("Return");
         }
+        if (button == NextInfor.gameObject)
+        {
+            Which_Text(1);
+        }
       /*  if (button = Button_002.GetComponent<Button>().gameObject)
         {
         }
@@ -129,14 +147,16 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void Which_Text(int id)
     {
-        if (Flag_Text)//若文本未显示完
+        if (Flag_Text&&Texts_001!=null)//若文本未显示完
         {
             Texts_001.GetComponent<Text>().text = null;//清空对话框中文字
+
+          //  StartCoroutine(show(number_Conver));
             for (int i = 0; i < number_Conver; i++)
             {
                 try
-                {
-                    Texts_001.GetComponent<Text>().text += All_Tex[ThisChar_Conver + i];//添加文字
+               {
+                    Texts_001.GetComponent<Text>().text += Text_Scene1[ThisChar_Conver + i];//添加文字
                 }
                 catch
                 {
@@ -145,12 +165,22 @@ public class UIManager : MonoBehaviour
             }
             ThisChar_Conver = ThisChar_Conver + number_Conver;      //记录文本下标
         }
-        else
+        else if (Texts_001 != null)
         {
             TextBox.transform.DOScaleX(0,0.3f);//文本已显示完，关闭对话框
         }
     }
+  /*  IEnumerator show(int length)
+    {
+        int i = 0;
+        yield return new WaitForSeconds(0.1f);
+        while (i < length)
+        {
+            Texts_001.GetComponent<Text>().text += Text_Scene1[ThisChar_Conver + i];
+            i += 1;
+        }
 
+    }*/
     /// <summary>
     /// 控制显示哪个动画
     /// </summary>

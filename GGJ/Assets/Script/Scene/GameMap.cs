@@ -131,6 +131,7 @@ public class GameMap:BaseGame
 
     public override void StartSet()
     {
+        GameCtrler.Ctrler.GameMap = this;
         FloorArray = GameObject.Find("Floors").GetComponentsInChildren<Floor>();
         for(int Idx = 0;Idx < FloorArray.Length;++Idx)
         {

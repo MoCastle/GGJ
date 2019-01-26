@@ -6728,7 +6728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &791783821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7944,7 +7944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &891452829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9503,6 +9503,7 @@ MonoBehaviour:
   Vague: {fileID: 0}
   StoryBook: {fileID: 791783820}
   All_Story: {fileID: 1685133592}
+  _thisName: 
 --- !u!114 &1208734161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15165,7 +15166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 331, y: -215}
+  m_AnchoredPosition: {x: 376, y: -29}
   m_SizeDelta: {x: 198.8, y: 198.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878090206
@@ -17635,7 +17636,7 @@ PrefabInstance:
     - target: {fileID: 6213292239498756759, guid: ab415ccae5a87534082ad592721e724b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6213292238840489566, guid: ab415ccae5a87534082ad592721e724b,
         type: 3}
@@ -17756,6 +17757,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213292239614933718, guid: ab415ccae5a87534082ad592721e724b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab415ccae5a87534082ad592721e724b, type: 3}

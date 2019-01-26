@@ -137,7 +137,7 @@ public class GameMap:BaseGame
         {
             FloorArray[Idx].CurFloorIdx = Idx;
             FloorArray[Idx].SetMap(this);
-            Debug.Log(FloorArray[Idx].transform.localPosition);
+       //     Debug.Log(FloorArray[Idx].transform.localPosition);
         }
 
         GameObject Map = GameObject.Find("Map");

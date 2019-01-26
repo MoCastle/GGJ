@@ -18,8 +18,13 @@ public class GamePoint : Floor
         
         if (oneIn && twoIn)
         {
+            //////////////////////////此关胜利
             if (SceneName != "")
-                SceneManager.LoadScene(SceneName);
+            {
+                UIManager.WhichScene(SceneName);
+          //      GP_UI.WhichScene(SceneName);
+              // SceneManager.LoadScene(SceneName);
+            }
         }else if(PlayerList[0].CurFloorIdx  == _CurFloorIdx || PlayerList[1].CurFloorIdx == _CurFloorIdx)
         {
             _Dirty = true;

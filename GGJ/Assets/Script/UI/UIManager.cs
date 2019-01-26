@@ -39,6 +39,8 @@ public class UIManager : MonoBehaviour
     private int number_Conver=15;          //每一行所显示的字数
     private int ThisChar_Conver = 0;      //当前显示到第几个字符
 
+    public string _thisName;       //即将跳转的关卡
+
     public string all_Tex 
     {
         get { return Text_Scene1; }
@@ -65,57 +67,28 @@ public class UIManager : MonoBehaviour
         if (StoryBook!=null)
         StoryBook.transform.DOScale(0, 0);
 
-        Which_Text(1);
-     //   TextBox.transform.DOScaleX(0, 0f);//对话框初始化
-    //    Which_Text(1);
-    }
-    void Update() 
-    {
-
-      /*  if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("下一句");
-            Which_Text(2);
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            TextBox.transform.DOScaleX(1, 0f);
-            Which_Text(2);
-        }*/
+       TextBox.SetActive(false);
     }
 
     private void MyOnClick(GameObject button)
     {
         if (Button_001 != null && button ==Button_001.GetComponent<Button>().gameObject)
         {
-          //  Debug.Log("start");
             thisScene = 1;
             ToBlack tb = GameObject.Find("ToBlack").GetComponent<ToBlack>();
            tb._ToBlack();
-         //   SceneManager.LoadScene("Scene1");
-         //  
-           // SceneManager.LoadScene("scene2");
         }
         if (Exit != null && button == Exit.GetComponent<Button>().gameObject)
         {
             Debug.Log("Exit");
-            // SceneManager.LoadScene("scene2");
         }
         if (ReStart != null && button == ReStart.GetComponent<Button>().gameObject)
         {
             Debug.Log("ReStart");
             GameCtrler.Ctrler.ResetPlayer();
-         //   thisScene += 1;
-          //  Debug.Log("Scene" + thisScene.ToString());
-          //  if (thisScene<=4)
-        //  SceneManager.LoadScene("Scene"+thisScene.ToString());
-            // SceneManager.LoadScene("scene2");
         }
         if (Story != null && button == Story.GetComponent<Button>().gameObject)
         {
-         //   thisScene += 1;
-          //  Debug.Log("Scene" + thisScene.ToString());
-          //  SceneManager.LoadScene("Scene" + thisScene.ToString());
             StoryBook.transform.DOScale(1, 0.3f);
             Debug.Log("Story");            // 
         }
@@ -132,23 +105,36 @@ public class UIManager : MonoBehaviour
         {
             Which_Text(1);
         }
-      /*  if (button = Button_002.GetComponent<Button>().gameObject)
-        {
-        }
-       if (button = Button_003.GetComponent<Button>().gameObject)
-        {
-        }
-        if (button = Button_004.GetComponent<Button>().gameObject)
-        {
-        }*/
     }
+
+    /// <summary>
+    /// 哪一关胜利
+    /// </summary>
+    public static void WhichScene(string name)
+    {
+        UIManager u = new UIManager();
+        u._thisName = name;
+        u.ShowBox(name);
+        Debug.Log("name is "+name);
+    }
+    /// <summary>
+    /// 显示对话框
+    /// </summary>
+    public void ShowBox(string name)
+    {
+        Debug.Log(" show name is " + name);
+        TextBox.SetActive(true);
+    }
+
     /// <summary>
     /// 控制显示哪段文本
     /// </summary>
     public void Which_Text(int id)
     {
+        
         if (Flag_Text&&Texts_001!=null)//若文本未显示完
         {
+            Debug.Log("id");
             Texts_001.GetComponent<Text>().text = null;//清空对话框中文字
 
           //  StartCoroutine(show(number_Conver));

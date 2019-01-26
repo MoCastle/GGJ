@@ -13158,7 +13158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1584305574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13175,6 +13175,7 @@ MonoBehaviour:
   BackGround_001: {fileID: 0}
   Texts_001: {fileID: 386660762}
   TextBox: {fileID: 654226043}
+  NextInfor: {fileID: 0}
   Button_001: {fileID: 0}
   Exit: {fileID: 1838826229}
   ReStart: {fileID: 822190117}

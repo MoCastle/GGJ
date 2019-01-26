@@ -4,11 +4,13 @@ using UnityEngine;
 public enum FloorType
 {
     Normal,
-    Jamed
+    Jamed,
+    player
 }
 public class Floor : MonoBehaviour
 {
     public FloorType Type;
+
 
     
     // Start is called before the first frame update

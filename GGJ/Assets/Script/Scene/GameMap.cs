@@ -1,15 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class GameMap:BaseGame
 {
+    static int jamed = 0;
+    static int player = 1;
+
+
+
+
     [Title("格子宽高", "black")]
     public float BoxWidth = 256;
     [Title("行格子数量", "black")]
     public int LineNum;
-    [Title("行格子数量", "black")]
+    [Title("列格子数量", "black")]
     public int Column;
+
+
+    enum Type
+    {
+        Normal,
+        Jamed,
+    }
 
     public Transform Floors;
     public Transform Floor;
@@ -22,8 +34,8 @@ public class GameMap:BaseGame
     // Start is called before the first frame update
     public override void StartSet()
     {
-
-       // FloorArray = GameObject.Find("Floors").GetComponentInChildren<Floor>();
+        FloorArray = GameObject.Find("Floors").GetComponentsInChildren<Floor>();
+        CreateJamed();
 
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
@@ -40,6 +52,7 @@ public class GameMap:BaseGame
             float Y = (PlayerModel[Index].transform.position.y - MapComp.BoxWidth / 2 - Floors.position.y);
             X = X > 0 ? Mathf.Floor(X / MapComp.BoxWidth) : 0;
             Y = Y > 0 ? Mathf.Floor(Y / MapComp.BoxWidth) : 0;
+            Debug.Log("Index is "+Index);
             Debug.Log("X is " + X);
             Debug.Log("y is " + Y);
 
@@ -50,7 +63,9 @@ public class GameMap:BaseGame
             Debug.Log(" newPS.x  is " + newPS.x);
             Debug.Log("  newPS.y  is " + newPS.y);
             PlayerModel[Index].transform.position = newPS;
-            PlayerLocation[Index] = (int)Y * Column + (int)X;
+            PlayerLocation[Index] = (int)Y * LineNum + (int)X;
+
+            FloorArray[PlayerLocation[Index]].Type = FloorType.player;
 
             Debug.Log("Index is "+Index);
             /*foreach (object i in PlayerLocation)
@@ -62,8 +77,24 @@ public class GameMap:BaseGame
         }
       
     }
+    /// <summary>
+    /// 创建障碍物
+    /// </summary>
+    private void CreateJamed()
+    {
+
+        for (int i = 0; i < FloorArray.Length;i++ )
+        {
+            if (i<Column)
+            {
+                FloorArray[i].Type = FloorType.Jamed;
+            }
+        }
+   
 
 
+       
+    }
     /// <summary>
     /// 角色移动
     /// </summary>
@@ -78,27 +109,134 @@ public class GameMap:BaseGame
         
         Vector3 oldPS = PlayerModels[player_id-1].transform.position;
 
-        Debug.Log("oldPS is "+oldPS);
-        Vector3 newPS=oldPS;          //应移动的位置
+        bool canMove = IfJamed(player_id,forward);//检测移动方向上是否有障碍物
+        Debug.Log("canMove is "+canMove);
+        if (canMove)
+        {
+            Debug.Log("oldPS is " + oldPS);
+            Vector3 newPS = oldPS;          //应移动的位置
+            switch (forward)
+            {
+                case 1:
+                    newPS.y = oldPS.y + MapComp.BoxWidth;//+ Y * MapComp.BoxWidth;
+                    break;
+                case 2:
+                    newPS.x = oldPS.x - MapComp.BoxWidth;//- X * MapComp.BoxWidth;
+                    break;
+                case 3:
+                    newPS.y = oldPS.y - MapComp.BoxWidth;//- Y * MapComp.BoxWidth;
+                    break;
+                case 4:
+                    newPS.x = oldPS.x + MapComp.BoxWidth;//+ X * MapComp.BoxWidth;
+                    break;
+                default:
+                    break;
+            };
+            PlayerModels[player_id - 1].transform.position = newPS;
+            Debug.Log(" PlayerModels[" + player_id + "].transform.position   is " + PlayerModels[player_id - 1].transform.position);
+        }
+    }
+
+    /// <summary>
+    /// 移动方向是否可前进
+    /// </summary>
+    private bool IfJamed(int player_id,int forward)
+    {
+        bool flag=true;
         switch (forward)
         {
             case 1:
-            newPS.y =oldPS.y+ MapComp.BoxWidth ;//+ Y * MapComp.BoxWidth;
+                //检测是否是障碍物
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.Jamed)
+                    flag = false;
+                else
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.player;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
+                }
+                //检测是否是玩家
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
+                {
+                    if (player_id == 1)
+                    {
+                    }
+                    else
+                    {
+                    }
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.Jamed;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
+                }
+
                 break;
             case 2:
-                newPS.x = oldPS.x - MapComp.BoxWidth  ;//- X * MapComp.BoxWidth;
+                //检测是否是障碍物
+                if (FloorArray[PlayerLocation[player_id - 1] - 1].Type == FloorType.Jamed)
+                    flag = false;
+                else
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] - 1].Type = FloorType.player;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] - 1;
+                }
+                //检测是否是玩家
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.player;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
+                }
                 break;
             case 3:
-                newPS.y = oldPS.y - MapComp.BoxWidth  ;//- Y * MapComp.BoxWidth;
+                //检测是否是障碍物
+                if (FloorArray[PlayerLocation[player_id - 1] - LineNum].Type == FloorType.Jamed)
+                    flag = false;
+                else
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] - LineNum].Type = FloorType.player;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] - LineNum;
+                }
+                //检测是否是玩家
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.Jamed;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
+                }
                 break;
             case 4:
-                newPS.x = oldPS.x + MapComp.BoxWidth  ;//+ X * MapComp.BoxWidth;
+                //检测是否是障碍物
+                if (FloorArray[PlayerLocation[player_id - 1] + 1].Type == FloorType.Jamed)
+                    flag = false;
+                else
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + 1].Type = FloorType.Jamed;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + 1;
+                }
+                //检测是否是玩家
+                if (FloorArray[PlayerLocation[player_id - 1] + LineNum].Type == FloorType.player)
+                {
+                    FloorArray[PlayerLocation[player_id - 1]].Type = FloorType.Normal;
+                    FloorArray[PlayerLocation[player_id - 1] + LineNum].Type = FloorType.Jamed;
+                    PlayerLocation[player_id - 1] = PlayerLocation[player_id - 1] + LineNum;
+                }
                 break;
             default:
                 break;
-        };
-        PlayerModels[player_id-1].transform.position = newPS;
-        Debug.Log(" PlayerModels["+player_id+"].transform.position   is " + PlayerModels[player_id - 1].transform.position);
+        }
+        return flag;
+    }
+
+    /// <summary>
+    /// 判断前方是何种障碍物
+    /// </summary>
+    /// <param name="player_id"></param>
+    /// <param name="forward"></param>
+    private void WhichType(int player_id, int forward)
+    {
 
     }
     private void Awake()

@@ -28,14 +28,74 @@ public class GameMap:BaseGame
 
     public Floor[] FloorArray;
     [Title("玩家", "black")]
+<<<<<<< HEAD
     public Transform[] PlayerModels;
     public int[] PlayerLocation;
+=======
+    public PlayerGameObj[] PlayerList;
+    public int[] PlayerLocation;
+
+    public Location GetLocationByPS(Vector3 position)
+    {
+        Location location = new Location();
+        float X = (position.x - BoxWidth / 2 - Floors.position.x);
+        float Y = (position.y - BoxWidth / 2 - Floors.position.y);
+        X = X > 0 ? Mathf.Round(X / BoxWidth) : 0;
+        Y = Y > 0 ? Mathf.Round(Y / BoxWidth) : 0;
+        X = X >= Column ? Column - 1 : X;
+        Y = Y >= LineNum ? LineNum - 1 : Y;
+        location.y = (int)Y;
+        location.x = (int)X;
+
+        return location;
+    }
+    public Location GetLocationByIdx(int Idx)
+    {
+        Location location = new Location();
+        location.x = Idx % Column;
+        location.y = Idx / Column;
+        return location;
+    }
+    public int GetIdxByLocation(Location location)
+    {
+        location.x = location.x < 0 ? 0:location.x ;
+        location.x = location.x > Column - 1 ? Column - 1:location.x;
+        location.y = location.y < 0 ? 0 : location.y;
+        location.y = location.y > LineNum - 1 ? LineNum - 1:location.y;
+        int Idx = location.x + location.y * Column;
+        return Idx;
+    }
+    public int GetIdxByPosition(Vector3 position)
+    {
+        return GetIdxByLocation( GetLocationByPS(position));
+    }
+    public Vector3 GetPosition(Vector3 position)
+    {
+        return GetPosition(GetLocationByPS(position));
+    }
+    public Vector3 GetPosition( Location location )
+    {
+        Vector3 newVector = new Vector3();
+        newVector.x = location.x * BoxWidth + BoxWidth / 2;
+        newVector.y = location.y * BoxWidth + BoxWidth / 2;
+        return newVector;
+    }
+    public Vector3 GetPosition(int Idx)
+    {
+        return GetPosition(GetLocationByIdx(Idx));
+    }
+>>>>>>> parent of ee196ee... 移动功能转移
 
     // Start is called before the first frame update
     public override void StartSet()
     {
+<<<<<<< HEAD
         FloorArray = GameObject.Find("Floors").GetComponentsInChildren<Floor>();
         CreateJamed();
+=======
+
+       // FloorArray = GameObject.Find("Floors").GetComponentInChildren<Floor>();
+>>>>>>> parent of ee196ee... 移动功能转移
 
         Vector3 testVector = new Vector3();
         testVector.x = 1.28f;
@@ -63,6 +123,7 @@ public class GameMap:BaseGame
             Debug.Log(" newPS.x  is " + newPS.x);
             Debug.Log("  newPS.y  is " + newPS.y);
             PlayerModel[Index].transform.position = newPS;
+<<<<<<< HEAD
             PlayerLocation[Index] = (int)Y * LineNum + (int)X;
 
             FloorArray[PlayerLocation[Index]].Type = FloorType.player;
@@ -74,6 +135,9 @@ public class GameMap:BaseGame
                 Debug.Log(j+" is "+i);
                 j++;
             }*/
+=======
+            PlayerLocation[Index] = GetIdxByLocation(location);
+>>>>>>> parent of ee196ee... 移动功能转移
         }
       
     }
@@ -102,6 +166,7 @@ public class GameMap:BaseGame
     /// <param name="forward">哪个方向 1_上，2_左，3_下_4_右</param>
     public void Move(int player_id,int forward)
     {
+<<<<<<< HEAD
         GameObject Map = GameObject.Find("Map");
         GameMap MapComp = Map.GetComponent<GameMap>();
 
@@ -228,6 +293,46 @@ public class GameMap:BaseGame
                 break;
         }
         return flag;
+=======
+
+        InputListener.isMove = false;
+
+        Location location = GetLocationByIdx(PlayerLocation[player_id-1]);
+
+        Vector3 oldPS = PlayerList[player_id-1].transform.position;
+
+        Debug.Log("oldPS is "+oldPS);
+        switch (forward)
+        {
+            //上
+            case 1:
+                location.y += 1;
+                break;
+            //左
+            case 2:
+                location.x -= 1;
+                break;
+            //下
+            case 3:
+                location.y -= 1;
+                break;
+            //右
+            case 4:
+                location.x += 1;
+                break;
+            default:
+                break;
+        };
+        int newIdx = GetIdxByLocation(location);
+        PlayerLocation[player_id - 1] = GetIdxByLocation(location);
+        Floor TargetFloor = GetFoorByIdx(newIdx) ;
+        if(!TargetFloor)
+        {
+            return;
+        }
+        PlayerList[player_id-1].transform.position = FloorArray[newIdx].transform.position;
+        Debug.Log(" PlayerModels["+player_id+"].transform.position   is " + PlayerList[player_id - 1].transform.position);
+>>>>>>> parent of ee196ee... 移动功能转移
     }
 
     /// <summary>

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 32483272}
   - component: {fileID: 32483271}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 32988056}
   - component: {fileID: 32988055}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 40437381}
   - component: {fileID: 40437380}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 58228045}
   - component: {fileID: 58228044}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 58949694}
   - component: {fileID: 58949693}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 62437430}
   - component: {fileID: 62437429}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 72934056}
   - component: {fileID: 72934055}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 72977126}
   - component: {fileID: 72977125}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 78424024}
   - component: {fileID: 78424023}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 148541108}
   - component: {fileID: 148541107}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,7 +1054,7 @@ GameObject:
   - component: {fileID: 157715504}
   - component: {fileID: 157715503}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 161444496}
   - component: {fileID: 161444495}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1240,7 @@ GameObject:
   - component: {fileID: 163813115}
   - component: {fileID: 163813114}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 168383868}
   - component: {fileID: 168383867}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1426,7 +1426,7 @@ GameObject:
   - component: {fileID: 172522080}
   - component: {fileID: 172522079}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: 199408326}
   - component: {fileID: 199408325}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 202957167}
   - component: {fileID: 202957166}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1641,10 +1641,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 202957164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57e55703d23d6488a597ec44a524ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MoveDirection: 2
 --- !u!212 &202957167
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1705,7 +1706,7 @@ GameObject:
   - component: {fileID: 205026746}
   - component: {fileID: 205026745}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,7 +1799,7 @@ GameObject:
   - component: {fileID: 213813811}
   - component: {fileID: 213813810}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1891,7 +1892,7 @@ GameObject:
   - component: {fileID: 218823822}
   - component: {fileID: 218823821}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2063,7 +2064,7 @@ GameObject:
   - component: {fileID: 259160614}
   - component: {fileID: 259160613}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2156,7 +2157,7 @@ GameObject:
   - component: {fileID: 264264491}
   - component: {fileID: 264264490}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2249,7 +2250,7 @@ GameObject:
   - component: {fileID: 266574335}
   - component: {fileID: 266574334}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2492,7 +2493,7 @@ GameObject:
   - component: {fileID: 323491752}
   - component: {fileID: 323491751}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,7 +2586,7 @@ GameObject:
   - component: {fileID: 339881858}
   - component: {fileID: 339881857}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,7 +2679,7 @@ GameObject:
   - component: {fileID: 363860985}
   - component: {fileID: 363860984}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2771,7 +2772,7 @@ GameObject:
   - component: {fileID: 384344769}
   - component: {fileID: 384344768}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2800,10 +2801,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 384344766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57e55703d23d6488a597ec44a524ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MoveDirection: 2
 --- !u!212 &384344769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2943,7 +2945,7 @@ GameObject:
   - component: {fileID: 395575429}
   - component: {fileID: 395575428}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3036,7 +3038,7 @@ GameObject:
   - component: {fileID: 423339719}
   - component: {fileID: 423339718}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3129,7 +3131,7 @@ GameObject:
   - component: {fileID: 430836914}
   - component: {fileID: 430836913}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3222,7 +3224,7 @@ GameObject:
   - component: {fileID: 439258461}
   - component: {fileID: 439258460}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3251,10 +3253,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 439258458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57e55703d23d6488a597ec44a524ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MoveDirection: 2
 --- !u!212 &439258461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3315,7 +3318,7 @@ GameObject:
   - component: {fileID: 439584567}
   - component: {fileID: 439584566}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3408,7 +3411,7 @@ GameObject:
   - component: {fileID: 442026626}
   - component: {fileID: 442026625}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3583,7 +3586,7 @@ GameObject:
   - component: {fileID: 451783154}
   - component: {fileID: 451783153}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3676,7 +3679,7 @@ GameObject:
   - component: {fileID: 474704557}
   - component: {fileID: 474704556}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3769,7 +3772,7 @@ GameObject:
   - component: {fileID: 481307878}
   - component: {fileID: 481307877}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3862,7 +3865,7 @@ GameObject:
   - component: {fileID: 486867811}
   - component: {fileID: 486867810}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4034,7 +4037,7 @@ GameObject:
   - component: {fileID: 494243061}
   - component: {fileID: 494243060}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4127,7 +4130,7 @@ GameObject:
   - component: {fileID: 505556780}
   - component: {fileID: 505556779}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4220,7 +4223,7 @@ GameObject:
   - component: {fileID: 509708161}
   - component: {fileID: 509708160}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4313,7 +4316,7 @@ GameObject:
   - component: {fileID: 524210720}
   - component: {fileID: 524210719}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4406,7 +4409,7 @@ GameObject:
   - component: {fileID: 528085963}
   - component: {fileID: 528085962}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4499,7 +4502,7 @@ GameObject:
   - component: {fileID: 533279055}
   - component: {fileID: 533279054}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4653,11 +4656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1448910690, guid: bdb1105fda0ce0d4c8f579db69ff94a9, type: 3}
       propertyPath: LineNum
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1448910690, guid: bdb1105fda0ce0d4c8f579db69ff94a9, type: 3}
       propertyPath: Column
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1448910690, guid: bdb1105fda0ce0d4c8f579db69ff94a9, type: 3}
       propertyPath: PlayerModels.Array.data[0]
@@ -4687,7 +4690,7 @@ GameObject:
   - component: {fileID: 543031313}
   - component: {fileID: 543031312}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4780,7 +4783,7 @@ GameObject:
   - component: {fileID: 543587258}
   - component: {fileID: 543587257}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4873,7 +4876,7 @@ GameObject:
   - component: {fileID: 554363245}
   - component: {fileID: 554363244}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor97
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4966,7 +4969,7 @@ GameObject:
   - component: {fileID: 560385585}
   - component: {fileID: 560385584}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5059,7 +5062,7 @@ GameObject:
   - component: {fileID: 561812010}
   - component: {fileID: 561812009}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5152,7 +5155,7 @@ GameObject:
   - component: {fileID: 569777182}
   - component: {fileID: 569777181}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5245,7 +5248,7 @@ GameObject:
   - component: {fileID: 589953784}
   - component: {fileID: 589953783}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5338,7 +5341,7 @@ GameObject:
   - component: {fileID: 595773722}
   - component: {fileID: 595773721}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5505,7 +5508,7 @@ GameObject:
   - component: {fileID: 620497285}
   - component: {fileID: 620497284}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5598,7 +5601,7 @@ GameObject:
   - component: {fileID: 633065301}
   - component: {fileID: 633065300}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5691,7 +5694,7 @@ GameObject:
   - component: {fileID: 650233245}
   - component: {fileID: 650233244}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor93
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5784,7 +5787,7 @@ GameObject:
   - component: {fileID: 650605940}
   - component: {fileID: 650605939}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5877,7 +5880,7 @@ GameObject:
   - component: {fileID: 651997643}
   - component: {fileID: 651997642}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6007,7 +6010,7 @@ GameObject:
   - component: {fileID: 663119519}
   - component: {fileID: 663119518}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6100,7 +6103,7 @@ GameObject:
   - component: {fileID: 695062750}
   - component: {fileID: 695062749}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6193,7 +6196,7 @@ GameObject:
   - component: {fileID: 745828700}
   - component: {fileID: 745828699}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6286,7 +6289,7 @@ GameObject:
   - component: {fileID: 794778738}
   - component: {fileID: 794778737}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6379,7 +6382,7 @@ GameObject:
   - component: {fileID: 801341398}
   - component: {fileID: 801341397}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6595,7 +6598,7 @@ GameObject:
   - component: {fileID: 836715852}
   - component: {fileID: 836715851}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6688,7 +6691,7 @@ GameObject:
   - component: {fileID: 851427198}
   - component: {fileID: 851427197}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6781,7 +6784,7 @@ GameObject:
   - component: {fileID: 857217791}
   - component: {fileID: 857217790}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6874,7 +6877,7 @@ GameObject:
   - component: {fileID: 858677015}
   - component: {fileID: 858677014}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6967,7 +6970,7 @@ GameObject:
   - component: {fileID: 864316634}
   - component: {fileID: 864316633}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6999,7 +7002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
 --- !u!212 &864316634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7060,7 +7063,7 @@ GameObject:
   - component: {fileID: 865375782}
   - component: {fileID: 865375781}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7153,7 +7156,7 @@ GameObject:
   - component: {fileID: 893849772}
   - component: {fileID: 893849771}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7246,7 +7249,7 @@ GameObject:
   - component: {fileID: 913126474}
   - component: {fileID: 913126473}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7339,7 +7342,7 @@ GameObject:
   - component: {fileID: 916541134}
   - component: {fileID: 916541133}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7432,7 +7435,7 @@ GameObject:
   - component: {fileID: 925739057}
   - component: {fileID: 925739056}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7525,7 +7528,7 @@ GameObject:
   - component: {fileID: 947926117}
   - component: {fileID: 947926116}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7618,7 +7621,7 @@ GameObject:
   - component: {fileID: 961694611}
   - component: {fileID: 961694610}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7711,7 +7714,7 @@ GameObject:
   - component: {fileID: 978603285}
   - component: {fileID: 978603284}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7804,7 +7807,7 @@ GameObject:
   - component: {fileID: 979772438}
   - component: {fileID: 979772437}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7897,7 +7900,7 @@ GameObject:
   - component: {fileID: 997892226}
   - component: {fileID: 997892225}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7990,7 +7993,7 @@ GameObject:
   - component: {fileID: 1007086093}
   - component: {fileID: 1007086092}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8019,10 +8022,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007086090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57e55703d23d6488a597ec44a524ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MoveDirection: 2
 --- !u!212 &1007086093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8083,7 +8087,7 @@ GameObject:
   - component: {fileID: 1009490276}
   - component: {fileID: 1009490275}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8176,7 +8180,7 @@ GameObject:
   - component: {fileID: 1010034787}
   - component: {fileID: 1010034786}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8269,7 +8273,7 @@ GameObject:
   - component: {fileID: 1026522130}
   - component: {fileID: 1026522129}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8362,7 +8366,7 @@ GameObject:
   - component: {fileID: 1035561692}
   - component: {fileID: 1035561691}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8455,7 +8459,7 @@ GameObject:
   - component: {fileID: 1058783167}
   - component: {fileID: 1058783166}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8548,7 +8552,7 @@ GameObject:
   - component: {fileID: 1072477821}
   - component: {fileID: 1072477820}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8641,7 +8645,7 @@ GameObject:
   - component: {fileID: 1082476521}
   - component: {fileID: 1082476520}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8808,7 +8812,7 @@ GameObject:
   - component: {fileID: 1133116069}
   - component: {fileID: 1133116068}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8901,7 +8905,7 @@ GameObject:
   - component: {fileID: 1134673070}
   - component: {fileID: 1134673069}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8994,7 +8998,7 @@ GameObject:
   - component: {fileID: 1136957453}
   - component: {fileID: 1136957452}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9087,7 +9091,7 @@ GameObject:
   - component: {fileID: 1137901707}
   - component: {fileID: 1137901706}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9180,7 +9184,7 @@ GameObject:
   - component: {fileID: 1145589045}
   - component: {fileID: 1145589044}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9390,7 +9394,7 @@ GameObject:
   - component: {fileID: 1153350768}
   - component: {fileID: 1153350767}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9573,7 +9577,7 @@ GameObject:
   - component: {fileID: 1167610901}
   - component: {fileID: 1167610900}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9740,7 +9744,7 @@ GameObject:
   - component: {fileID: 1183491593}
   - component: {fileID: 1183491592}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9833,7 +9837,7 @@ GameObject:
   - component: {fileID: 1190613083}
   - component: {fileID: 1190613082}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9926,7 +9930,7 @@ GameObject:
   - component: {fileID: 1236218446}
   - component: {fileID: 1236218445}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10019,7 +10023,7 @@ GameObject:
   - component: {fileID: 1255728421}
   - component: {fileID: 1255728420}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10112,7 +10116,7 @@ GameObject:
   - component: {fileID: 1261412331}
   - component: {fileID: 1261412330}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10205,7 +10209,7 @@ GameObject:
   - component: {fileID: 1265064177}
   - component: {fileID: 1265064176}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10298,7 +10302,7 @@ GameObject:
   - component: {fileID: 1274578230}
   - component: {fileID: 1274578229}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10391,7 +10395,7 @@ GameObject:
   - component: {fileID: 1276344180}
   - component: {fileID: 1276344179}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10484,7 +10488,7 @@ GameObject:
   - component: {fileID: 1285888601}
   - component: {fileID: 1285888600}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10577,7 +10581,7 @@ GameObject:
   - component: {fileID: 1292075762}
   - component: {fileID: 1292075761}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10670,7 +10674,7 @@ GameObject:
   - component: {fileID: 1299746128}
   - component: {fileID: 1299746127}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10763,7 +10767,7 @@ GameObject:
   - component: {fileID: 1301073176}
   - component: {fileID: 1301073175}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10856,7 +10860,7 @@ GameObject:
   - component: {fileID: 1307692498}
   - component: {fileID: 1307692497}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10949,7 +10953,7 @@ GameObject:
   - component: {fileID: 1319889666}
   - component: {fileID: 1319889665}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11183,7 +11187,7 @@ GameObject:
   - component: {fileID: 1348729029}
   - component: {fileID: 1348729028}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11276,7 +11280,7 @@ GameObject:
   - component: {fileID: 1362588385}
   - component: {fileID: 1362588384}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11375,7 +11379,7 @@ GameObject:
   - component: {fileID: 1410565058}
   - component: {fileID: 1410565057}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11468,7 +11472,7 @@ GameObject:
   - component: {fileID: 1416033398}
   - component: {fileID: 1416033397}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11561,7 +11565,7 @@ GameObject:
   - component: {fileID: 1418431157}
   - component: {fileID: 1418431156}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11654,7 +11658,7 @@ GameObject:
   - component: {fileID: 1422893940}
   - component: {fileID: 1422893939}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11747,7 +11751,7 @@ GameObject:
   - component: {fileID: 1428261483}
   - component: {fileID: 1428261482}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11840,7 +11844,7 @@ GameObject:
   - component: {fileID: 1433637905}
   - component: {fileID: 1433637904}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11933,7 +11937,7 @@ GameObject:
   - component: {fileID: 1440988538}
   - component: {fileID: 1440988537}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12026,7 +12030,7 @@ GameObject:
   - component: {fileID: 1449595599}
   - component: {fileID: 1449595598}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12119,7 +12123,7 @@ GameObject:
   - component: {fileID: 1449718132}
   - component: {fileID: 1449718131}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12212,7 +12216,7 @@ GameObject:
   - component: {fileID: 1451725227}
   - component: {fileID: 1451725226}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12305,7 +12309,7 @@ GameObject:
   - component: {fileID: 1473405107}
   - component: {fileID: 1473405106}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12398,7 +12402,7 @@ GameObject:
   - component: {fileID: 1507170072}
   - component: {fileID: 1507170071}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12491,7 +12495,7 @@ GameObject:
   - component: {fileID: 1524482544}
   - component: {fileID: 1524482543}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12584,7 +12588,7 @@ GameObject:
   - component: {fileID: 1533034929}
   - component: {fileID: 1533034928}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12677,7 +12681,7 @@ GameObject:
   - component: {fileID: 1548335775}
   - component: {fileID: 1548335774}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12770,7 +12774,7 @@ GameObject:
   - component: {fileID: 1562054934}
   - component: {fileID: 1562054933}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12863,7 +12867,7 @@ GameObject:
   - component: {fileID: 1563401543}
   - component: {fileID: 1563401542}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12956,7 +12960,7 @@ GameObject:
   - component: {fileID: 1570225973}
   - component: {fileID: 1570225972}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13049,7 +13053,7 @@ GameObject:
   - component: {fileID: 1574717292}
   - component: {fileID: 1574717291}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor92
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13149,7 +13153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1584305574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13272,7 +13276,7 @@ GameObject:
   - component: {fileID: 1588729187}
   - component: {fileID: 1588729186}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13365,7 +13369,7 @@ GameObject:
   - component: {fileID: 1613794496}
   - component: {fileID: 1613794495}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13525,7 +13529,7 @@ GameObject:
   - component: {fileID: 1644869919}
   - component: {fileID: 1644869918}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13618,7 +13622,7 @@ GameObject:
   - component: {fileID: 1659204425}
   - component: {fileID: 1659204424}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13711,7 +13715,7 @@ GameObject:
   - component: {fileID: 1661133511}
   - component: {fileID: 1661133510}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13804,7 +13808,7 @@ GameObject:
   - component: {fileID: 1665809089}
   - component: {fileID: 1665809088}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13897,7 +13901,7 @@ GameObject:
   - component: {fileID: 1666859104}
   - component: {fileID: 1666859103}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13990,7 +13994,7 @@ GameObject:
   - component: {fileID: 1669539262}
   - component: {fileID: 1669539261}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14157,7 +14161,7 @@ GameObject:
   - component: {fileID: 1685554533}
   - component: {fileID: 1685554532}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14250,7 +14254,7 @@ GameObject:
   - component: {fileID: 1693972248}
   - component: {fileID: 1693972247}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14343,7 +14347,7 @@ GameObject:
   - component: {fileID: 1708908173}
   - component: {fileID: 1708908172}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14436,7 +14440,7 @@ GameObject:
   - component: {fileID: 1709691506}
   - component: {fileID: 1709691505}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14576,7 +14580,7 @@ GameObject:
   - component: {fileID: 1721769063}
   - component: {fileID: 1721769062}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14669,7 +14673,7 @@ GameObject:
   - component: {fileID: 1746764097}
   - component: {fileID: 1746764096}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14979,7 +14983,7 @@ GameObject:
   - component: {fileID: 1768870148}
   - component: {fileID: 1768870147}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15072,7 +15076,7 @@ GameObject:
   - component: {fileID: 1771503404}
   - component: {fileID: 1771503403}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15165,7 +15169,7 @@ GameObject:
   - component: {fileID: 1805690159}
   - component: {fileID: 1805690158}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15258,7 +15262,7 @@ GameObject:
   - component: {fileID: 1810427748}
   - component: {fileID: 1810427747}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15351,7 +15355,7 @@ GameObject:
   - component: {fileID: 1818100977}
   - component: {fileID: 1818100976}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15561,7 +15565,7 @@ GameObject:
   - component: {fileID: 1878839822}
   - component: {fileID: 1878839821}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15654,7 +15658,7 @@ GameObject:
   - component: {fileID: 1893569107}
   - component: {fileID: 1893569106}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15747,7 +15751,7 @@ GameObject:
   - component: {fileID: 1901192772}
   - component: {fileID: 1901192771}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15840,7 +15844,7 @@ GameObject:
   - component: {fileID: 1914711547}
   - component: {fileID: 1914711546}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15933,7 +15937,7 @@ GameObject:
   - component: {fileID: 1924174059}
   - component: {fileID: 1924174058}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16026,7 +16030,7 @@ GameObject:
   - component: {fileID: 1926650728}
   - component: {fileID: 1926650727}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16119,7 +16123,7 @@ GameObject:
   - component: {fileID: 1936184158}
   - component: {fileID: 1936184157}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16212,7 +16216,7 @@ GameObject:
   - component: {fileID: 1939321954}
   - component: {fileID: 1939321953}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16305,7 +16309,7 @@ GameObject:
   - component: {fileID: 1940150684}
   - component: {fileID: 1940150683}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor95
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16475,7 +16479,7 @@ GameObject:
   - component: {fileID: 2003288229}
   - component: {fileID: 2003288228}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16568,7 +16572,7 @@ GameObject:
   - component: {fileID: 2021781537}
   - component: {fileID: 2021781536}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16661,7 +16665,7 @@ GameObject:
   - component: {fileID: 2044357652}
   - component: {fileID: 2044357651}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16754,7 +16758,7 @@ GameObject:
   - component: {fileID: 2044358803}
   - component: {fileID: 2044358802}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16847,7 +16851,7 @@ GameObject:
   - component: {fileID: 2045989175}
   - component: {fileID: 2045989174}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16940,7 +16944,7 @@ GameObject:
   - component: {fileID: 2053529919}
   - component: {fileID: 2053529918}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17033,7 +17037,7 @@ GameObject:
   - component: {fileID: 2088617335}
   - component: {fileID: 2088617334}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17126,7 +17130,7 @@ GameObject:
   - component: {fileID: 2093157139}
   - component: {fileID: 2093157138}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17219,7 +17223,7 @@ GameObject:
   - component: {fileID: 2116051643}
   - component: {fileID: 2116051642}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17312,7 +17316,7 @@ GameObject:
   - component: {fileID: 2144303590}
   - component: {fileID: 2144303589}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17405,7 +17409,7 @@ GameObject:
   - component: {fileID: 2146065505}
   - component: {fileID: 2146065504}
   m_Layer: 0
-  m_Name: Floor(Clone)
+  m_Name: Floor106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17434,10 +17438,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2146065502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e6fbe3998ac074fa863f2ac14413d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d57e55703d23d6488a597ec44a524ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MoveDirection: 2
 --- !u!212 &2146065505
 SpriteRenderer:
   m_ObjectHideFlags: 0

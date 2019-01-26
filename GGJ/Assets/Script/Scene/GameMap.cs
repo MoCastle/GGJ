@@ -36,7 +36,6 @@ public class GameMap:BaseGame
 
     public Transform Floors;
     public Transform Floor;
-    int[] _PlayerPS;
 
     public Floor[] FloorArray;
     public Floor GetFloorByLocation(Location location)
@@ -120,15 +119,7 @@ public class GameMap:BaseGame
         player.Move(forward);
     }
 
-    /// <summary>
-    /// 判断前方是何种障碍物
-    /// </summary>
-    /// <param name="player_id"></param>
-    /// <param name="forward"></param>
-    private void WhichType(int player_id, int forward)
-    {
-
-    }
+    
     private void Awake()
     {
         FloorArray = new Floor[Floors.transform.childCount];
@@ -163,4 +154,5 @@ public class GameMap:BaseGame
             PlayerModel[Index].SetMap(this);
         }
     }
+    
 }

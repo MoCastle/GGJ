@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 public class ToolMenue : MonoBehaviour {
-    [MenuItem("重置地图/重置地图")]
+    [MenuItem("重置地图/放置地图")]
     public static void AddetScene()
     {
         Vector3 testVector = new Vector3();
@@ -23,11 +23,25 @@ public class ToolMenue : MonoBehaviour {
         {
             Transform newBox = GameObject.Instantiate<Transform>(MapComp.Floor);
             newBox.SetParent(Floors);
-            //Vector3 newPS = MapComp.GetPosition(Idx);
-
-         //   newPS.z = newBox.transform.position.z;
-       //     newBox.transform.position = newPS;
         }
+    }
+    [MenuItem("重置地图/刷新地图")]
+    public static void ResetScene()
+    {
+        Vector3 testVector = new Vector3();
+        testVector.x = 1.28f;
+        GameObject Map = GameObject.Find("Map");
+        GameMap MapComp = Map.GetComponent<GameMap>();
+        Transform Floors = MapComp.Floors;
+        if (Floors != null)
+        {
+            foreach (Transform obj in Floors)
+            {
+                int Idx = MapComp.GetIdxByPosition(obj.transform.position);
+                obj.name = "Floor" + Idx.ToString();
+            }
+        }
+        
     }
     [MenuItem("重置地图/格式化玩家位置")]
     public static void SetPlayers()

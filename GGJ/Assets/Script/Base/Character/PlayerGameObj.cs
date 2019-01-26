@@ -1,7 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
-
+struct DelayDelegate
+{
+    public float DelayTime;
+    public Action Delegate;
+}
 public class PlayerGameObj : MapObj
 {
     [Title("禁止垂直运动", "black")]
@@ -14,6 +19,10 @@ public class PlayerGameObj : MapObj
     }
     public bool Move(MoveDir forward,bool Pushed = false)
     {
+        if(DelayRun != null && !Pushed)
+        {
+            return false;
+        }
         GameMap map = _Map;
         InputListener.isMove = false;
 
@@ -82,5 +91,26 @@ public class PlayerGameObj : MapObj
     {
         CurFloorIdx = _Map.GetIdxByLocation(location);
         transform.position = _Map.GetPosition(CurFloorIdx);
+        Floor floor = _Map.GetFloorByIndex(CurFloorIdx);
+        floor.SetDirty();
+    }
+    public Action DelayRun
+    {
+        get;
+        set;
+    }
+    float _DelayTime;
+    public void SetDelayRun( Action action )
+    {
+        DelayRun = action;
+        _DelayTime = Time.time + 0.3f;
+    }
+    private void Update()
+    {
+        if(Time.time>_DelayTime && DelayRun!=null)
+        {
+            DelayRun();
+            DelayRun = null;
+        }
     }
 }

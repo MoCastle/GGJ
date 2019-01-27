@@ -127,6 +127,8 @@ public class GameMap:BaseGame
         {
             FloorArray[Idx] = Floors.transform.GetChild(Idx).GetComponent<Floor>();
         }
+        //GameCtrler.Ctrler.PlayAudio(ClipEnum.Paiper);
+        GameCtrler.Ctrler.PlayBGM(BGMEnum.Level3);
     }
 
     public override void StartSet()

@@ -1,6 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum Auido
+{
+    BGM1,
+    BGM2,
+    BGM3,
+}
 
 public class GameCtrler
 {
@@ -31,5 +37,13 @@ public class GameCtrler
     {
         mgr.ShowBox(name);
         Debug.Log("NextScene");
+    }
+    public void PlayBGM(BGMEnum audioEnum)
+    {
+        BaseFrame.Frame.PlayBGMClip(audioEnum);
+    }
+    public void PlayAudio(ClipEnum audioEnum)
+    {
+        BaseFrame.Frame.PlayAudioClip(audioEnum);
     }
 }

@@ -1,7 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum BGMEnum
+{
+    Head_Tail,
+    Level1_2,
+    Level3,
+    Level4
+}
+public enum ClipEnum
+{
+    Icon1,
+    Icon2,
+    Paiper
+}
 public class BaseFrame
 {
     static BaseFrame _Frame;
@@ -16,14 +29,55 @@ public class BaseFrame
             return _Frame;
         }
     }
+    AudioSource _BGM;
+    AudioSource _AudioClip;
+    Dictionary<BGMEnum, AudioClip> _BGMDict;
+    Dictionary<ClipEnum, AudioClip> _AudioClipDict;
     BaseFrame()
     {
         _GameTime = Time.time;
         GameObject baseGameObj = new GameObject("GameFrame");
         BaseFrameObj frameObj = baseGameObj.AddComponent<BaseFrameObj>();
+        _BGM = baseGameObj.AddComponent<AudioSource>();
+        _AudioClip = baseGameObj.AddComponent<AudioSource>();
+
         frameObj.BaseFrame = this;
         GameObject.DontDestroyOnLoad(frameObj);
         _AllFrameGame = new Dictionary<string, List<BaseGame>>();
+        _BGMDict = new Dictionary<BGMEnum, AudioClip>();
+        _AudioClipDict = new Dictionary<ClipEnum, AudioClip>();
+        _LoadAudio();
+    }
+    void _LoadAudio()
+    {
+        foreach (BGMEnum BGM in Enum.GetValues(typeof(BGMEnum)))
+        {
+            AudioClip clip = Resources.Load<AudioClip>("Audio/" + BGM.ToString());
+            _BGMDict[BGM] = clip;
+        }
+        foreach(ClipEnum clipEnum in Enum.GetValues(typeof(ClipEnum)))
+        {
+            AudioClip clip = Resources.Load<AudioClip>("Audio/" + clipEnum.ToString());
+            _AudioClipDict[clipEnum] = clip;
+        }
+    }
+    public void PlayAudioClip(ClipEnum audioEnum)
+    {
+        AudioClip clip;
+        if(_AudioClipDict.TryGetValue(audioEnum,out clip))
+        {
+            _AudioClip.clip = clip;
+            _AudioClip.Play();
+        }
+    }
+    public void PlayBGMClip(BGMEnum audioEnum)
+    {
+        AudioClip clip;
+        if (_BGMDict.TryGetValue(audioEnum, out clip))
+        {
+            _AudioClip.clip = clip;
+            _AudioClip.Play();
+        }
     }
     Dictionary<string,List<BaseGame>> _AllFrameGame;
     List<BaseGame> GetGameListByName( string Name)

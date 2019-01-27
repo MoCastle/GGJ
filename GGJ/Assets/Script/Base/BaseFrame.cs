@@ -39,6 +39,7 @@ public class BaseFrame
         GameObject baseGameObj = new GameObject("GameFrame");
         BaseFrameObj frameObj = baseGameObj.AddComponent<BaseFrameObj>();
         _BGM = baseGameObj.AddComponent<AudioSource>();
+        _BGM.loop = true;
         _AudioClip = baseGameObj.AddComponent<AudioSource>();
 
         frameObj.BaseFrame = this;
@@ -75,8 +76,8 @@ public class BaseFrame
         AudioClip clip;
         if (_BGMDict.TryGetValue(audioEnum, out clip))
         {
-            _AudioClip.clip = clip;
-            _AudioClip.Play();
+            _BGM.clip = clip;
+            _BGM.Play();
         }
     }
     Dictionary<string,List<BaseGame>> _AllFrameGame;

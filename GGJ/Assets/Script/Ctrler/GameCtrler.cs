@@ -35,6 +35,7 @@ public class GameCtrler
     }
     public void NextScene(string name)
     {
+        if (mgr!=null)
         mgr.ShowBox(name);
         Debug.Log("NextScene");
     }

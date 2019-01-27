@@ -168,7 +168,7 @@ public class ToBlack : MonoBehaviour
         T_CG_005.text = Texts_3;
         col.a = 0;
       //  StartCoroutine(CG_6());
-        Tweener T1 = T_CG_005.DOColor(col, 1f);
+        Tweener T1 = T_CG_005.DOColor(col, 1.5f);
         T1.OnComplete(delegate() { StartCoroutine(CG_6()); });
       
 
@@ -198,14 +198,14 @@ public class ToBlack : MonoBehaviour
        yield return new WaitForSeconds(1.5f);
        col.a = 1;
        //  StartCoroutine(CG_6());
-       Tweener T1 = T_CG_005.DOColor(col, 2f);
+       Tweener T1 = T_CG_005.DOColor(col, 1.5f);
        T1.OnComplete(delegate() { T_CG_005.text = Texts_6; StartCoroutine(CG_9()); });
    }
    IEnumerator CG_9()
    {
        yield return new WaitForSeconds(1f);
        col.a = 1;
-       Tweener T3 = BLACK.DOColor(col, 1f);
+       Tweener T3 = BLACK.DOColor(col, 1.8f);
        T3.OnComplete(delegate() { SceneManager.LoadScene("Scene1"); });
    }
 }

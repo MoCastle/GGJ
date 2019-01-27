@@ -8,4 +8,6 @@ public class SpiteManager : MonoBehaviour
     public Sprite[] Scene_002;
     public Sprite[] Scene_003;
     public Sprite[] Scene_004;
+    public Sprite[] Roles;
+    public Sprite[] CG;
 }

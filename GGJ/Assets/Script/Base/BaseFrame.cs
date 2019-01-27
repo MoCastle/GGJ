@@ -41,7 +41,8 @@ public class BaseFrame
         _BGM = baseGameObj.AddComponent<AudioSource>();
         _BGM.loop = true;
         _AudioClip = baseGameObj.AddComponent<AudioSource>();
-
+        _BGM.playOnAwake = false;
+        _AudioClip.playOnAwake = false;
         frameObj.BaseFrame = this;
         GameObject.DontDestroyOnLoad(frameObj);
         _AllFrameGame = new Dictionary<string, List<BaseGame>>();

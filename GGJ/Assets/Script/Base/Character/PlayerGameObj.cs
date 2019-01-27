@@ -17,6 +17,7 @@ public class PlayerGameObj : MapObj
     {
         Vector3 position = _Map.GetPosition(_StartIdx);
         transform.position = position;
+        _CurFloorIdx = _StartIdx;
     }
     public bool Move(MoveDir forward,bool Pushed = false)
     {
